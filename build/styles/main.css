@@ -45,12 +45,10 @@ header{
 #alert-bar{
     padding: 4px;
     height: 25px;
-    /* width: 100%; */
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     overflow: hidden;
     overflow-wrap: unset;
     display:flex;
-
 }
 
 #alerts-text{
@@ -68,3 +66,7 @@ header{
     padding-left: 10px;
     padding-right: 10px;
 }
+
+
+
+/* Alerts Bar End */
