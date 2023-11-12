@@ -8,12 +8,12 @@ font-family: 'PT Serif', serif;
 *{
     margin: 0;
 }
+
 header{
-    padding: 10px;
+    margin-top: 15px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.63);
     height: 55px;
-    text-align: center;
 }
 
 .logo{
@@ -21,18 +21,50 @@ header{
     font-weight: 400;
     font-size: 35px;
     font-family: 'Lobster', sans-serif;
+    text-align: center;
 }
 
 .navbar{
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 .navbar a{
     text-decoration: none;
     color: black;
     margin: 20px;
+
 }
 
 .navbar a:hover{
     color: #454545;
+}
+
+/* Alerts Bar */
+
+#alert-bar{
+    padding: 4px;
+    height: 25px;
+    /* width: 100%; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    overflow-wrap: unset;
+    display:flex;
+
+}
+
+#alerts-text{
+    position: relative;
+    white-space: nowrap;
+    border-left: 1px solid rgba(0, 0, 0, 0.219);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#alerts-text2{
+    position: relative;
+    white-space: nowrap;
+    border-left: 1px solid rgba(0, 0, 0, 0.219);
+    padding-left: 10px;
+    padding-right: 10px;
 }
