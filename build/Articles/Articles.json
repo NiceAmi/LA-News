@@ -1,0 +1,84 @@
+{
+    "articles": [
+        {
+            "date": "Updated 1752 GMT (0152 HKT) November 12, 2023",
+            "postName": "Netanyahu refuses to say if he'll take responsibility for Oct. 7 attacks",
+            "Shortpost": "The Israeli prime minister tells CNN there will be time for such difficult questions once the war is over",
+            "picture": "../media/Netanyahu.jpg",
+            "fullpost": "Israeli Prime Minister Benjamin Netanyahu refused to answer whether he would take responsibility for failing to prevent the October 7 attack on Israel, saying in a CNN interview Sunday that such difficult questions were for when the war is over.",
+            "Reporter": "By Heather Chen, Andrew Raine, Sophie Tanno and Maureen Chowdhury, CNN"
+        },
+        {
+            "date": "Updated 1353 GMT (0152 HKT) November 12, 2023",
+            "articleName": "Analysis: Rally puts pressure on Netanyahu over hostages — but overall support for war remains high",
+            "ShortArticle": "Organizers say tens of thousands of people attended a rally Saturday evening for Israeli hostages held by Hamas in Gaza.",
+            "picture": "../media/protesting.jpg",
+            "fullArticle": "Organizers say tens of thousands of people attended a rally Saturday evening for Israeli hostages held by Hamas in Gaza.\nThe demonstration held in Tel Aviv and attended by, among others, the former President Reuven Rivlin — was the biggest since October 7, Israeli media reported.\nOn the face of it, it had the appearance of the huge protests seen earlier in the year against Prime Minister Benjamin Netanyahu and his plans to take power away from the country’s Supreme Court.\nAnd there was anger, with many there demanding the government do more to bring home the hostages.\n“They ask us who our rage is directed at, and it is all of humanity… but mainly those who are responsible for us,” the Israeli newspaper Haaretz quoted Jacky Levy, whose partner’s family was abducted during the Hamas attack, as saying.\nFor sure, Netanyahu is under great pressure.\nOctober 7 happened on his watch, and opinion polls suggest he will pay heavily for that when the time comes to hold a general election.\nInfuriatingly for many Israelis, he still refuses to accept responsibility, telling CNNs Dana Bash on Sunday that he would “answer all the questions” when Hamas was defeated.\nBut it would be a big mistake to see the large crowds on Saturday evening as indicative of any growing unease among Israelis at the prosecution of the war.\nWhile a ceasefire might, in theory, be an attractive option to secure the hostages' release, overall support in Israel for the war, if not the war leader, remains very high."
+        },
+        {
+            "date": "Updated 1632 GMT (0152 HKT) November 12, 2023",
+            "articleName": "We can't bury the bodies: Those inside Al-Shifa Hospital describe increasingly dire conditions",
+            "ShortArticle": "Conditions are deteriorating further at Al-Shifa Hospital, Gaza's largest medical center, according to accounts from inside the embattled enclave.",
+            "picture": "../media/shifa.jpg",
+            "Reporter": "From CNN's Sarah El Sirgany and Kareem Khadder",
+            "fullArticle": "Conditions are deteriorating further at Al-Shifa Hospital, Gaza's largest medical center, according to accounts from inside the embattled enclave.\n\nA freelance journalist inside the complex, Mustafa Sarsour, told CNN: “There are more than 70 bodies that still need to be buried, and for the fourth day we can’t bury the bodies.”\nSarsour added that there was “trash in every corner of the hospital building complex. Before the electricity went out, there was a burner (incinerator) at the back of the hospital where the trash was burnt.”\n\nHe said the smell was “beyond imagination.”\n\nSarsour told CNN there are more than 15,000 displaced people, medical staff and patients inside Al-Shifa.\n\nHe said there were tanks some 200 meters north of the complex and heavy gunfire.\n\nCNN is unable to verify accounts about military operations in the vicinity of Al-Shifa.\n\nRemember: Heavy fighting near Gaza’s largest hospital has left it in a “catastrophic situation,” with patients and staff trapped inside, ambulances unable to collect the wounded and life-support systems without electricity, health officials and aid agencies are reporting.\n\nAccording to the Hamas-controlled health ministry in Gaza, staff and patients have been unable to leave the Al-Shifa Hospital in Gaza City as the complex remains under 'complete siege.'\n\nOn Saturday, the Israel Defense Forces spoke of “ongoing intense fighting” around the vicinity of Al-Shifa, but denied claims it was directly firing at or laying siege to the complex.\n\nThousands of displaced civilians are still thought to be in the hospital compound, according to the Palestine Red Crescent Society and hospital officials."
+        },
+        {
+            "date": "",
+            "articleName": "JohnDoe",
+            "ShortArticle": "John",
+            "picture": "Doe",
+            "Reporter": "",
+            "fullArticle": "johndoe@example.com"
+        },
+        {
+            "date": "",
+            "articleName": "JohnDoe",
+            "ShortArticle": "John",
+            "picture": "Doe",
+            "Reporter": "",
+            "fullArticle": "johndoe@example.com"
+        },
+        {
+            "date": "",
+            "articleName": "JohnDoe",
+            "ShortArticle": "John",
+            "picture": "Doe",
+            "Reporter": "",
+            "fullArticle": "johndoe@example.com"
+        },
+        {
+            "date": "",
+            "articleName": "JohnDoe",
+            "ShortArticle": "John",
+            "picture": "Doe",
+            "Reporter": "",
+            "fullArticle": "johndoe@example.com"
+        },
+        {
+            "date": "",
+            "articleName": "JohnDoe",
+            "ShortArticle": "John",
+            "picture": "Doe",
+            "Reporter": "",
+            "fullArticle": "johndoe@example.com"
+        },
+        {
+            "date": "",
+            "articleName": "JohnDoe",
+            "ShortArticle": "John",
+            "picture": "Doe",
+            "Reporter": "",
+            "fullArticle": "johndoe@example.com"
+        },
+        {
+            "date": "",
+            "articleName": "JohnDoe",
+            "ShortArticle": "John",
+            "picture": "Doe",
+            "Reporter": "",
+            "fullArticle": "johndoe@example.com"
+        },
+       
+    ]
+}
