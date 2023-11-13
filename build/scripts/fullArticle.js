@@ -6,14 +6,14 @@ if (selectedPost) {
     ajax.onload = function () {
         let response = JSON.parse(this.responseText);
         console.log(response);
-        let post = response.articles;
+        let post = response.articles.find((article) => article.articleName === selectedPost);
         let news = `
         <ul>
-        <li>${post.articleName}<li>
-        <li>${post.ShortArticle}<li>
-        <li>${post.picture}<li>
-        <li>${post.fullArticle}<li>
-        <li>${post.Reporter}<li>
+        <li>${post.articleName}</li>
+        <li>${post.ShortArticle}</li>
+        <li><img src="${post.picture}" alt="Article Image"></li>
+        <li>${post.fullArticle}</li>
+        <li>${post.Reporter}</li>
         </ul>`;
         $("#fullPost").append(news);
     };
@@ -22,3 +22,6 @@ if (selectedPost) {
 else {
     window.location.href = "https://www.youtube.com/";
 }
+$("#back").on("click", function () {
+    window.location.href = "./homepage.html";
+});
