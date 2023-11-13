@@ -1,4 +1,5 @@
 "use strict";
+let MainPostNews = document.getElementById('main-post');
 const showInfoBtn = (articleName) => {
     console.log("Clicked article:", articleName);
     localStorage.setItem("selectedPost", articleName);
@@ -11,20 +12,79 @@ ajax.onload = function () {
     console.log(response);
     for (let x in response.articles) {
         let posts = response.articles[x];
-        let LANews = `
-        <ul>
-        <li>${posts.articleName}</li>
-        <li>${posts.ShortArticle}</li>
-        <li><img src="${posts.picture}" alt="Article Image"></li>
-        <li>${posts.Reporter}</li>
-        <button class="showInfoBtn" onclick="showInfoBtn('${posts.articleName}')">Full article</button>
-
-        </ul>`;
-        $("#posts").append(LANews);
+        if (posts.type == "Sports") {
+            let LANews = `
+        <div class="newsPost sports" onclick="showInfoBtn('${posts.articleName}')">
+        <div>
+        <img src="${posts.picture}" alt="Article Image">
+        </div>
+        <div>
+        <h4>${posts.articleName}</h4>
+        <p class="short-article">${posts.ShortArticle}</p>
+        </div>
+        </div>`;
+            $("#sport-posts").append(LANews);
+        }
+        else if (posts.type == "Politics") {
+            let LANews = `
+    <div class="newsPost politics" onclick="showInfoBtn('${posts.articleName}')">
+    <div>
+    <img src="${posts.picture}" alt="Article Image">
+    </div>
+    <div>
+    <h4>${posts.articleName}</h4>
+    <p class="short-article">${posts.ShortArticle}</p>
+    </div>
+    </div>`;
+            $("#politics-posts").append(LANews);
+        }
+        else if (posts.type == "TV") {
+            let LANews = `
+    <div class="newsPost tv" onclick="showInfoBtn('${posts.articleName}')">
+    <div>
+    <img src="${posts.picture}" alt="Article Image">
+    </div>
+    <div>
+    <h4>${posts.articleName}</h4>
+    <p class="short-article">${posts.ShortArticle}</p>
+    </div>
+    </div>`;
+            $("#tv-posts").append(LANews);
+        }
     }
-    ;
+    for (let x in response.articles) {
+        let posts = response.articles[x];
+        if (posts.type == "TV" || "Politics" || "Sports") {
+            MainPostNews.innerHTML = `
+    <div class="main-post" onclick="showInfoBtn('${posts.articleName}')">
+    <h2 class="main-post-title">${posts.articleName}</h2>
+    <div>
+    <img src="${posts.picture}" alt="Article Image">
+    </div>
+    <div>
+    <p class="short-article">${posts.ShortArticle}</p>
+    </div>
+    </div>`;
+        }
+        if (posts.type == "TV") {
+            MainPostNews.style.background = '#ff000088';
+            MainPostNews.style.color = 'black';
+        }
+        else if (posts.type == "Sports") {
+            MainPostNews.style.background = '#35479b';
+            MainPostNews.style.color = 'white';
+        }
+        else if (posts.type == "Politics") {
+            MainPostNews.style.background = '#9b3535';
+            MainPostNews.style.color = 'white';
+        }
+    }
 };
 ajax.send();
+// Removed from LANews post
+// <p>${posts.ShortArticle}</p>
+// <button class="showInfoBtn" onclick="showInfoBtn('${posts.articleName}')">Full article</button>
+// <p>${posts.Reporter}</p>
 // const flashContainer = document.getElementById("flash-container")!;
 // interface Flash {
 //   timestamp: Date;
