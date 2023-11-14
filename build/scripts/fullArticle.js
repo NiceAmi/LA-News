@@ -13,6 +13,7 @@ if (selectedPost) {
         <h1 class="post-article">${post.articleName}</h1>
         <h4 class="under-title">${post.ShortArticle}</h4>
         <p class="reporter-name">${post.Reporter}</p>
+        <div class="post-main-image"><img src="${post.picture}" alt="Article Image"></div>
         <p class="article-main-text">${post.fullArticle}</p>
         </div>`;
         $("#fullPost").append(news);
@@ -25,4 +26,3 @@ else {
 $("#back").on("click", function () {
     window.location.href = "./homepage.html";
 });
-// <div class="post-main-image"><img src="${post.picture}" alt="Article Image"></div>

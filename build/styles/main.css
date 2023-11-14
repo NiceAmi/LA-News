@@ -250,6 +250,10 @@ header{
     margin-left: 35%;
 }
 
+.post-main-image img{
+    width: 100vh;
+}
+
 /* Alerts Bar End */
 /* #flash-container {
     position: fixed;
