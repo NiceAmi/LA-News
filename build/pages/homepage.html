@@ -66,10 +66,15 @@
     </header>
     <div class="container">
         <div class="ad-left">
-            <video controls autoplay>
+            <video autoplay muted> 
                 <source src="../data/assets/Drive the Future_ Commercial.mp4" type="video/mp4" />
             </video>
         </div>
+        <div id="notification-container" class="notify-container">
+            <div id="notification" class="notify-individual">
+                <div id="timestamp" class="timestamp"></div>
+                </div>
+            </div>
         <div class="news-container">
             <div class="main-post" id="main-post">
                 <h2 id="incoming-news">Incoming News</h2>
@@ -85,11 +90,15 @@
             </div>
         </div>
         <div class="ad-right">
-            <video autoplay controls>
+            <video autoplay muted>
                 <source src="../data/assets/LG_OLED.mp4" type="video/mp4" />
             </video>
         </div>
     </div>
+        <div class="notification" id="notification">
+            <p id="news-notify"></p>
+            <p id="timestamp"></p>
+        </div>
 
     <!-- <div id="flash-container"></div> -->
     <footer>

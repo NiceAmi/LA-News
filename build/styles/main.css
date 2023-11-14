@@ -76,32 +76,24 @@ header{
 /* Main Container and splitting */
 .container{
     display: flex;
+    width: 100%;
     margin-top: 5%;
     justify-content: center;
-    width: 1720px;
 }
 
 .ad-left{
     top: 50px;
     position: sticky;
-    margin: 30px;
-    /* border: 1px solid black; */
-    width: 350px;
-/* right: 60%; */
-   height: fit-content;
-   /* background-color: aquamarine; */
+    width: fit-content;
+    height: fit-content;
    
 }
 
 .ad-right{
     top: 50px;
     position: sticky;
-    margin: 30px;
-    /* border: 1px solid black; */
-    width: 350px;
-/* right: 60%; */
-   height: fit-content;
-   /* background-color: aquamarine; */
+    width: fit-content;
+    height: fit-content;
 }
 
 /* Main Post */
@@ -115,7 +107,6 @@ header{
 }
 
 .main-post{
-    display: block;
     margin: 20px;
     max-width: 1000px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.05);
@@ -146,18 +137,17 @@ header{
 }
 
 .newsPost{
-width: 50%;  
-  padding: 10px;
+    width: 100%;  
+    padding: 10px;
     margin: 10px;
     display: flex;
-    max-width: 850px;
+    max-width: 100vh;
     max-height: 140px;
     overflow: hidden;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.05);
 }
 
 .newsPost:hover{
-    width: 100%;
     cursor: pointer;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
     transition: 0.2s;
@@ -171,7 +161,7 @@ width: 50%;
 }
 
 .short-article{
-    max-width: 800px;
+    max-width: 100vh;
     max-height: 110px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -231,16 +221,6 @@ width: 50%;
 .news-container{
     padding-bottom:50px;
 
-}
-footer{
-    display: block;
-  background: linear-gradient(black, white, black);
-  position: fixed;
-  bottom: 0%;
-  width: 100%;
-  height: fit-content;
-  text-align: center;
-  color: black
 }
 video {
     width: 325px;
@@ -302,6 +282,15 @@ video {
 
 .post-main-image img{
     width: 100vh;
+}
+
+footer{
+  display: none;
+  padding: 5px;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+  height: fit-content;
+  text-align: center;
+  color: black
 }
 
 /* Alerts Bar End */

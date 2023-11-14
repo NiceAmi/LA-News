@@ -28,10 +28,10 @@ const paperSound = () => {
     let audio = new Audio('../data/assets/page_turn.mp3');
     audio.play()
 }
-$("#back").on("click", function (): void {
-    window.location.href = "./homepage.html";
-});
-$("#back").animate({marginLeft: "50px", }, 500);
-$("#back").animate({marginBottom: "55px"}, 500);
+// $("#back").on("click", function (): void {
+//     window.location.href = "./homepage.html";
+// });
+// $("#back").animate({marginLeft: "50px", }, 500);
+// $("#back").animate({marginBottom: "55px"}, 500);
 // $("#back").animate({height: "30px", width: "150px"}, 500);
 
