@@ -16,13 +16,22 @@ if (selectedPost) {
         <p class="article-main-text">${post.fullArticle}</p>
         </div>`;
         $("#fullPost").append(news);
+        $(".fullPost").slideDown(1870);
+        paperSound();
+
     };
     ajax.send();
 } else {
     window.location.href = "./homepage.html";
 }
-
+const paperSound = () => {
+    let audio = new Audio('../data/assets/page_turn.mp3');
+    audio.play()
+}
 $("#back").on("click", function (): void {
     window.location.href = "./homepage.html";
 });
+$("#back").animate({marginLeft: "50px", }, 500);
+$("#back").animate({marginBottom: "55px"}, 500);
+// $("#back").animate({height: "30px", width: "150px"}, 500);
 

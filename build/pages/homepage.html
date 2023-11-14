@@ -18,11 +18,12 @@
             <a href="./homepage.html">LA-News</a>
         </div>
         <div class="navbar">
-            <a href="./homepage.html" class="navlink">Homepage</a>
-            <a href="./homepage.html" class="navlink">Politics</a>
-            <a href="./homepage.html" class="navlink">Sports</a>
-            <a href="./homepage.html" class="navlink">Movies & Shows</a>
+            <a href="#incoming-news" class="navlink">Homepage</a>
+            <a href="#politics-section" class="navlink">Politics</a>
+            <a href="#sports-section" class="navlink">Sports</a>
+            <a href="#tv-section" class="navlink">Movies & Shows</a>
         </div>
+
         <marquee id="alert-bar">
             <span id="alerts-text">This is some random data by Liel</span>
             <span id="alerts-text">The IDF attacks in Gaza</span>
@@ -65,29 +66,38 @@
     </header>
     <div class="container">
         <div class="ad-left">
-            <p>Ad Box Here</p>
+            <video controls autoplay>
+                <source src="../data/assets/Drive the Future_ Commercial.mp4" type="video/mp4" />
+            </video>
         </div>
         <div class="news-container">
             <div class="main-post" id="main-post">
-                <h2>Incoming News</h2>
+                <h2 id="incoming-news">Incoming News</h2>
             </div>
             <div class="posts" id="politics-posts">
-                <h2>Politics</h2>
+                <h2 id="politics-section">Politics</h2>
             </div>
             <div class="posts" id="sport-posts">
-                <h2>Sports News</h2>
+                <h2 id="sports-section">Sports News</h2>
             </div>
             <div class="posts" id="tv-posts">
-                <h2>TV News</h2>
+                <h2 id="tv-section">TV News</h2>
             </div>
         </div>
         <div class="ad-right">
-            <p>Ad Box Here</p>
+            <video autoplay controls>
+                <source src="../data/assets/LG_OLED.mp4" type="video/mp4" />
+            </video>
         </div>
     </div>
 
     <!-- <div id="flash-container"></div> -->
-
+    <footer>
+        <p>
+            LANews is a large private news company from Israel, which provides the latest news from all over the world |
+            All rights reserved to Ami Nice and Liel Buchnic Ltd. | Contact: 972 3987 555 654,
+            customerservice@lanews.com </p>
+    </footer>
     <script src="../scripts/homepage.js"></script>
 </body>
 

@@ -78,22 +78,30 @@ header{
     display: flex;
     margin-top: 5%;
     justify-content: center;
+    width: 1720px;
 }
 
 .ad-left{
     top: 50px;
     position: sticky;
-    margin: 200px;
-    height: 150px;
-    border: 1px solid black;
+    margin: 30px;
+    /* border: 1px solid black; */
+    width: 350px;
+/* right: 60%; */
+   height: fit-content;
+   /* background-color: aquamarine; */
+   
 }
 
 .ad-right{
     top: 50px;
     position: sticky;
-    margin: 200px;
-    height: 150px;
-    border: 1px solid black;
+    margin: 30px;
+    /* border: 1px solid black; */
+    width: 350px;
+/* right: 60%; */
+   height: fit-content;
+   /* background-color: aquamarine; */
 }
 
 /* Main Post */
@@ -107,8 +115,9 @@ header{
 }
 
 .main-post{
+    display: block;
     margin: 20px;
-    max-width: 850px;
+    max-width: 1000px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.05);
     border-radius: 8px;
 }
@@ -137,7 +146,8 @@ header{
 }
 
 .newsPost{
-    padding: 10px;
+width: 50%;  
+  padding: 10px;
     margin: 10px;
     display: flex;
     max-width: 850px;
@@ -147,6 +157,7 @@ header{
 }
 
 .newsPost:hover{
+    width: 100%;
     cursor: pointer;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
     transition: 0.2s;
@@ -194,8 +205,47 @@ header{
     width: 100vh;
     margin-left: auto;
     margin-right: auto;
+
+    
+}
+#fullPost{
+    display: none;
+    text-align: center;
+    padding: 10px;
+
+
 }
 
+#back{
+    margin-left: 45%;
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#back:hover{
+    background-color: black;
+    color: white;
+}
+.news-container{
+    padding-bottom:50px;
+
+}
+footer{
+    display: block;
+  background: linear-gradient(black, white, black);
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  color: black
+}
+video {
+    width: 325px;
+    height: 320px;
+ }
 .ad-top{
     width: 100vh;
     margin-left: auto;
