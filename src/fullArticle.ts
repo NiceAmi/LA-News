@@ -15,7 +15,6 @@ if (selectedPost) {
         <p class="article-main-text">${post.fullArticle}</p>
         </div>`;
         $("#fullPost").append(news);
-
     };
     ajax.send();
 } else {

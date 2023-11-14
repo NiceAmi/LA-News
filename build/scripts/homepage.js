@@ -12,9 +12,7 @@ ajax.onload = function () {
     console.log(response);
     for (let x in response.articles) {
         let posts = response.articles[x];
-        if (posts.type == "Sports") {
-            let LANews = `
-        <div class="newsPost sports" onclick="showInfoBtn('${posts.articleName}')">
+        let textData = `<div class="newsPost ${posts.type}" onclick="showInfoBtn('${posts.articleName}')">
         <div>
         <img src="${posts.picture}" alt="Article Image">
         </div>
@@ -23,32 +21,16 @@ ajax.onload = function () {
         <p class="short-article">${posts.ShortArticle}</p>
         </div>
         </div>`;
+        if (posts.type == "Sports") {
+            let LANews = textData;
             $("#sport-posts").append(LANews);
         }
         else if (posts.type == "Politics") {
-            let LANews = `
-    <div class="newsPost politics" onclick="showInfoBtn('${posts.articleName}')">
-    <div>
-    <img src="${posts.picture}" alt="Article Image">
-    </div>
-    <div>
-    <h4>${posts.articleName}</h4>
-    <p class="short-article">${posts.ShortArticle}</p>
-    </div>
-    </div>`;
+            let LANews = textData;
             $("#politics-posts").append(LANews);
         }
         else if (posts.type == "TV") {
-            let LANews = `
-    <div class="newsPost tv" onclick="showInfoBtn('${posts.articleName}')">
-    <div>
-    <img src="${posts.picture}" alt="Article Image">
-    </div>
-    <div>
-    <h4>${posts.articleName}</h4>
-    <p class="short-article">${posts.ShortArticle}</p>
-    </div>
-    </div>`;
+            let LANews = textData;
             $("#tv-posts").append(LANews);
         }
     }

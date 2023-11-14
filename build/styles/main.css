@@ -168,20 +168,20 @@ header{
     transition: 0.15s;
 }
 
-.politics:hover{
+.Politics:hover{
     .short-article{
         color: red;
         transition: 0.15s;
     }
     
 }
-.sports:hover{
+.Sports:hover{
     .short-article{
         color: blue;
         transition: 0.15s;
     }
 }
-.tv:hover{
+.TV:hover{
     .short-article{
         color: red;
         transition: 0.15s;
