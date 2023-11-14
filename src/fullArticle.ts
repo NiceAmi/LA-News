@@ -11,7 +11,7 @@ if (selectedPost) {
         <div class="article-container">
         <h1 class="post-article">${post.articleName}</h1>
         <h4 class="under-title">${post.ShortArticle}</h4>
-        <p class=-"reporter-name">${post.Reporter}</p>
+        <p class="reporter-name">${post.Reporter}</p>
         <p class="article-main-text">${post.fullArticle}</p>
         </div>`;
         $("#fullPost").append(news);
