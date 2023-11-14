@@ -48,12 +48,12 @@ header{
 /* Alerts Bar */
 
 #alert-bar{
-    padding: 4px;
     height: 25px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     overflow: hidden;
     overflow-wrap: unset;
     display:flex;
+    margin-top: 5px;
 }
 
 #alerts-text{
@@ -186,6 +186,28 @@ header{
         color: red;
         transition: 0.15s;
     }
+}
+
+/* Full Article page */
+
+.article-container{
+    width: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ad-top{
+    width: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50px;
+    margin-top: 5%;
+    height: 150px;
+    border: 1px solid black;
+}
+
+.reporter-name{
+    color: #454545;
 }
 
 /* Alerts Bar End */
