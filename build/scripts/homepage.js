@@ -91,17 +91,16 @@ function showNotification() {
         singleNotify.appendChild(timestamp);
         let notification = document.getElementById('notification');
         if (notification) {
-            notification.insertAdjacentElement("afterbegin", singleNotify);
+            notification.insertAdjacentElement("beforeend", singleNotify);
+            notification.scrollTop = notification.scrollHeight;
         }
         else {
-            console.log("notification cont gone.");
+            console.log("notification container not found.");
         }
         const updateTimestamp = () => {
             const currentTime = new Date();
             const timeDiff = Math.floor((currentTime.getTime() - startTime.getTime()) / 60000);
             timestamp.textContent = timeDiff === 0 ? 'Now' : `${timeDiff} minutes ago`;
-            let updateTime = startTime;
-            updateTime = currentTime;
         };
         setInterval(updateTimestamp, 60000);
         yield delay(60000);

@@ -76,6 +76,7 @@ ajax.send();
 
 
 let notification = document.getElementById('notification') as HTMLElement;
+
 async function showNotification() {
     console.log("started");
     await delay(3000);
@@ -92,17 +93,16 @@ async function showNotification() {
     let notification = document.getElementById('notification');
 
     if (notification) {
-        notification.insertAdjacentElement("afterbegin", singleNotify);
-    }else{
-        console.log("notification cont gone.");
+        notification.insertAdjacentElement("beforeend" ,singleNotify);
+        notification.scrollTop = notification.scrollHeight;
+    } else {
+        console.log("notification container not found.");
     }
 
     const updateTimestamp = () => {
         const currentTime = new Date();
         const timeDiff = Math.floor((currentTime.getTime() - startTime.getTime()) / 60000);
         timestamp.textContent = timeDiff === 0 ? 'Now' : `${timeDiff} minutes ago`;
-        let updateTime: Date = startTime;
-        updateTime = currentTime;
     };
 
     setInterval(updateTimestamp, 60000);
