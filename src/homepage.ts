@@ -1,4 +1,6 @@
 let MainPostNews = document.getElementById('main-post') as HTMLElement;
+let shortsList: string[] = [];
+
 
 const showInfoBtn = (articleName: string) => {
     console.log("Clicked article:", articleName);
@@ -26,7 +28,8 @@ ajax.onload = function (): void {
         <h7>${posts.Reporter}</h7>
         </div>
         </div>`;
-
+        shortsList.push(posts.short[x]) 
+        
         if (posts.type == "Sports") {
             let LANews = textData;
             $("#sport-posts").append(LANews);
@@ -65,6 +68,52 @@ ajax.onload = function (): void {
             MainPostNews.style.background = '#9b3535'
             MainPostNews.style.color = 'white'
         }
+
     }
 }
+
 ajax.send();
+
+
+
+function showNotification() {
+    let notification = document.getElementById('notification') as HTMLElement;
+    notification.style.display = 'block';
+
+    let content = document.createElement('div');
+    content.id = 'content';
+
+    let timestamp = document.createElement('div');
+    timestamp.id = 'timestamp';
+
+    const startTime = new Date();
+
+    function updateTimestamp() {
+        const currentTime = new Date();
+        const timeDiff = Math.floor((currentTime.getTime() - startTime.getTime()) / 60000);
+
+        timestamp.innerHTML = timeDiff === 0 ? 'Now' : `${timeDiff} minutes ago`;
+    }
+
+    updateTimestamp();
+    content.insertAdjacentElement("beforeend", timestamp);
+    content.innerHTML += `This is a notification`;
+
+    let closeButton = document.createElement('button');
+    closeButton.id = "closebtn"
+    closeButton.innerHTML = 'X';
+    closeButton.addEventListener('click', () => {
+
+        notification.style.display = 'none';
+    });
+    content.insertAdjacentElement("afterbegin", closeButton);
+
+    notification.insertAdjacentElement("beforeend", content);
+
+    setTimeout(() => {
+        updateTimestamp();
+        showNotification();
+    }, 60000);
+}
+
+showNotification();
