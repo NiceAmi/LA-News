@@ -38,7 +38,14 @@ header{
     text-decoration: none;
     color: black;
     margin: 20px;
+}
 
+.ad-area{
+    display: flex;
+}
+
+.ad-mobile{
+    display: none;
 }
 
 .navbar a:hover{
@@ -104,7 +111,6 @@ header{
 
 .main-post h2{
     padding-top: 23px;
-
 }
 
 .main-post{
@@ -112,7 +118,6 @@ header{
     max-width: 1000px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.05);
     border-radius: 8px;
-    
 }
 
 .main-post:hover{
@@ -138,8 +143,7 @@ header{
     border-top: 1px solid rgba(0, 0, 0, 0.425);
 }
 
-.newsPost{
-    width: 100%;  
+.newsPost {
     padding: 10px;
     margin: 10px;
     display: flex;
@@ -147,7 +151,6 @@ header{
     max-height: 140px;
     overflow: hidden;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.05);
-    
 }
 
 .newsPost:hover{
@@ -195,17 +198,13 @@ header{
 /* Full Article page */
 
 .article-container{
-    width: 100vh;
+    max-width: 100vh;
     margin-left: auto;
     margin-right: auto;
-
-    
 }
 #fullPost{
     display: none;
-    text-align: center;
     padding: 10px;
-
 }
 h7{
     font-size:small;
@@ -236,7 +235,7 @@ video {
     height: 320px;
  }
 .ad-top{
-    width: 100vh;
+    max-width: 100vh;
     margin-left: auto;
     margin-right: auto;
     background: rgb(1,0,36);
@@ -290,16 +289,104 @@ video {
 }
 
 .post-main-image img{
-    width: 100vh;
+    max-width: 100vh;
 }
 
 footer{
-  display: none;
+  display: block;
   padding: 5px;
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
   height: fit-content;
   text-align: center;
   color: black
+}
+
+@media (max-width: 430px) {
+    .navbar a {
+        text-decoration: none;
+        color: black;
+        margin: 20px;
+        font-size: 15px;
+    }
+    .container {
+        width: 100%;
+        margin-top: 5%;
+        justify-content: center;
+    }
+    
+    .ad-left {
+        display: none;
+    }
+    
+    .ad-right {
+        display: none;
+    }
+    .ad-mobile {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: fit-content;
+        margin-bottom: -100px;
+    }
+
+    .newsPost {
+        max-width: 100vh;
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+        max-height: 280px;
+        overflow: hidden;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.05);
+        border: 1px solid rgba(0, 0, 0, 0.068);
+    }
+
+    .newsPost img {
+        padding-right: 3px;
+        width: 150px;
+        height: 100px;
+        margin-right: 2px;
+        border-radius: 3px;
+    }
+
+    h4{
+        margin: 0;
+    }
+
+    /* page article */
+    .ad-top{
+        max-width: 100vh;
+        margin-left: auto;
+        margin-right: auto;
+        background: rgb(1,0,36);
+        background: linear-gradient(270deg, rgba(1,0,36,1) 0%, rgba(18,9,121,1) 25%, rgba(34,0,255,1) 116%);
+        top: 50px;
+        margin-top: 15%;
+        height: 150px;
+        border-radius: 3px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.362);
+        overflow: hidden;
+    }
+    .post-main-image img{
+        max-width: 42vh;
+    }
+
+    .hp-person{
+        position: absolute;
+        height: 150px;
+        z-index: 0;
+        margin-left: -5%;
+    }
+
+    .reg-text1{
+        padding: 20px;
+        color: white;
+        text-align: center;
+        font-size: 31px;
+        font-weight: 600;
+        line-height: 0;
+        z-index: 5;
+    }
+    
 }
 
 /* Alerts Bar End */
