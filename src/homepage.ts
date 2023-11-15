@@ -76,67 +76,42 @@ ajax.send();
 
 
 let notification = document.getElementById('notification') as HTMLElement;
-let singleNotify = document.getElementById('singleNotify') as HTMLElement;
 async function showNotification() {
     console.log("started");
     await delay(3000);
-    let timestamp = document.createElement('div');
-    timestamp.id = 'timestamp';
     const startTime = new Date();
-    updateTimestamp()
-    function updateTimestamp() {
+    let timestamp = document.createElement('div');
+    timestamp.classList.add('timestamp');
+    timestamp.textContent = 'Now';
+
+    let singleNotify = document.createElement('div');
+    singleNotify.classList.add('singleNotify');
+    singleNotify.innerHTML = `This is a notification`;
+    singleNotify.appendChild(timestamp);
+
+    let notification = document.getElementById('notification');
+
+    if (notification) {
+        notification.insertAdjacentElement("afterbegin", singleNotify);
+    }else{
+        console.log("notification cont gone.");
+    }
+
+    const updateTimestamp = () => {
         const currentTime = new Date();
         const timeDiff = Math.floor((currentTime.getTime() - startTime.getTime()) / 60000);
-        timestamp.innerHTML = timeDiff === 0 ? 'Now' : `${timestamp.innerHTML} minutes ago`;
-    }
-    notification.insertAdjacentHTML("afterbegin", `<div class="singleNotify"><div class="timestamp">${timestamp.innerHTML}m ago</div>This is a notification</div>`);
-    console.log("Ended");
-    await delay(30000);
-    showNotification()
+        timestamp.textContent = timeDiff === 0 ? 'Now' : `${timeDiff} minutes ago`;
+        let updateTime: Date = startTime;
+        updateTime = currentTime;
+    };
+
+    setInterval(updateTimestamp, 60000);
+
+    await delay(60000);
+    showNotification();
 }
 
 function delay(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 showNotification()
-// function showNotification() {
-//     let notification = document.getElementById('notification') as HTMLElement;
-//     notification.style.display = 'block';
-
-//     let content = document.createElement('div');
-//     content.id = 'content';
-
-//     let timestamp = document.createElement('div');
-//     timestamp.id = 'timestamp';
-
-//     const startTime = new Date();
-
-//     function updateTimestamp() {
-//         const currentTime = new Date();
-//         const timeDiff = Math.floor((currentTime.getTime() - startTime.getTime()) / 60000);
-
-//         timestamp.innerHTML = timeDiff === 0 ? 'Now' : `${timeDiff} minutes ago`;
-//     }
-
-//     updateTimestamp();
-//     content.insertAdjacentElement("beforeend", timestamp);
-//     content.innerHTML += `This is a notification`;
-
-//     let closeButton = document.createElement('button');
-//     closeButton.id = "closebtn"
-//     closeButton.innerHTML = 'X';
-//     closeButton.addEventListener('click', () => {
-
-//         notification.style.display = 'none';
-//     });
-//     content.insertAdjacentElement("afterbegin", closeButton);
-
-//     notification.insertAdjacentElement("beforeend", content);
-
-//     setTimeout(() => {
-//         updateTimestamp();
-//         showNotification();
-//     }, 60000);
-// }
-
-// showNotification();
