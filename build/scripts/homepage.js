@@ -19,6 +19,8 @@ ajax.onload = function () {
         <div>
         <h4>${posts.articleName}</h4>
         <p class="short-article">${posts.ShortArticle}</p>
+        <h7>${posts.date}</h7>
+        <h7>${posts.Reporter}</h7>
         </div>
         </div>`;
         if (posts.type == "Sports") {
