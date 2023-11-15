@@ -135,8 +135,7 @@ header{
 .posts h2{
     margin: 20px;
     padding-top: 12px;
-    background-color: lightblue;
-
+    border-top: 1px solid rgba(0, 0, 0, 0.425);
 }
 
 .newsPost{
