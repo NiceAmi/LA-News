@@ -86,13 +86,15 @@ function showNotification() {
         timestamp.classList.add('timestamp');
         timestamp.textContent = 'Now';
         let singleNotify = document.createElement('div');
-        singleNotify.classList.add('singleNotify');
-        singleNotify.innerHTML = `This is a notification`;
+        singleNotify.classList.add('singleNotify', 'fade-in', 'move-up');
         singleNotify.appendChild(timestamp);
         let notification = document.getElementById('notification');
         if (notification) {
             notification.insertAdjacentElement("beforeend", singleNotify);
             notification.scrollTop = notification.scrollHeight;
+            yield new Promise(requestAnimationFrame);
+            singleNotify.style.opacity = '1';
+            singleNotify.style.transform = 'translateY(0)';
         }
         else {
             console.log("notification container not found.");

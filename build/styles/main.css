@@ -388,6 +388,19 @@ footer{
     }   
 }
 
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 #notification {
     position: fixed;
     bottom: 50px;
@@ -413,10 +426,24 @@ footer{
     border-radius: 3px;
     transition: 0.2s;
     animation: ease-in 0.2s;
+    opacity: 0; /* Set initial opacity to 0 */
 }
 
 .timestamp {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 12px;
     margin-bottom: 3px;
+}
+
+.move-up {
+    animation: moveUp 0.5s ease-in-out;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(50px); /* Adjust the initial translateY value as needed */
+    }
+    to {
+        transform: translateY(0);
+    }
 }
